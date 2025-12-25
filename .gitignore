@@ -1,0 +1,17 @@
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Maven build output
+target/
+
+# Tomcat deploy artifacts (generated)
+docker/webapps/
