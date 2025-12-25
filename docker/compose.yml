@@ -1,0 +1,8 @@
+services:
+  tomcat:
+    image: tomcat:9.0-jdk17-temurin
+    container_name: wardeploy-tomcat
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./webapps:/usr/local/tomcat/webapps
