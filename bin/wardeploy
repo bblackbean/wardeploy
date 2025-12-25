@@ -12,6 +12,9 @@ case "$CMD" in
     [[ -n "$WAR_PATH" ]] || { echo "사용법: wardeploy deploy <war경로>"; exit 1; }
     bash "$ROOT_DIR/scripts/deploy.sh" "$WAR_PATH"
     ;;
+  rollback)
+    bash "$ROOT_DIR/scripts/rollback.sh"
+    ;;
   *)
     echo "사용법: wardeploy {deploy}"
     exit 1;;
