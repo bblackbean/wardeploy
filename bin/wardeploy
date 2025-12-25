@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+source "$ROOT_DIR/wardeploy.env"
+
+CMD="${1:-}"; shift || true
+
+case "$CMD" in
+  deploy)
+    WAR_PATH="${1:-}"
+    [[ -n "$WAR_PATH" ]] || { echo "사용법: wardeploy deploy <war경로>"; exit 1; }
+    bash "$ROOT_DIR/scripts/deploy.sh" "$WAR_PATH"
+    ;;
+  *)
+    echo "사용법: wardeploy {deploy}"
+    exit 1;;
+esac
