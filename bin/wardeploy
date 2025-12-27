@@ -18,7 +18,13 @@ case "$CMD" in
   status)
     bash "$ROOT_DIR/scripts/status.sh"
     ;;
+  up)
+    bash "$ROOT_DIR/scripts/up.sh"
+    ;;
+  down)
+    bash "$ROOT_DIR/scripts/down.sh"
+    ;;
   *)
-    echo "사용법: wardeploy {deploy|rollback|status}"
+    echo "사용법: wardeploy {up|down|deploy|rollback|status}"
     exit 1;;
 esac
