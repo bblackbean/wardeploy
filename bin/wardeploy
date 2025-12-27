@@ -24,7 +24,11 @@ case "$CMD" in
   down)
     bash "$ROOT_DIR/scripts/down.sh"
     ;;
+  help|-h|--help)
+    bash "$ROOT_DIR/scripts/help.sh"
+    ;;
   *)
-    echo "사용법: wardeploy {up|down|deploy|rollback|status}"
+    echo "알 수 없는 명령: $CMD"
+    bash "$ROOT_DIR/scripts/help.sh"
     exit 1;;
 esac
