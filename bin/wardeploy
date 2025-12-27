@@ -15,7 +15,10 @@ case "$CMD" in
   rollback)
     bash "$ROOT_DIR/scripts/rollback.sh"
     ;;
+  status)
+    bash "$ROOT_DIR/scripts/status.sh"
+    ;;
   *)
-    echo "사용법: wardeploy {deploy}"
+    echo "사용법: wardeploy {deploy|rollback|status}"
     exit 1;;
 esac
